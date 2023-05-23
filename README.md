@@ -1,44 +1,49 @@
-# intellij-index-generator-plugin
+# Index Generator Plugin
 
-![Build](https://github.com/johyunchol/intellij-index-generator-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+The Index Generator Plugin is a plugin for IntelliJ IDEA that simplifies the process of generating an `index.ts` file in your TypeScript projects. It provides a convenient action to generate the index file with export statements for default exports from TypeScript files in the selected directory.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Features
 
-<!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
-<!-- Plugin description end -->
+- Generates an `index.ts` file with export statements for default exports in TypeScript files.
+- Works by right-clicking on a directory and selecting the "Generate index.ts" action.
+- Supports customization of the generated file through the plugin configuration.
 
 ## Installation
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-index-generator-plugin"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+You can install the Index Generator Plugin directly from the IntelliJ IDEA Plugin Marketplace.
 
-  Download the [latest release](https://github.com/johyunchol/intellij-index-generator-plugin/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+1. Go to `Preferences` or `Settings` in IntelliJ IDEA.
+2. Navigate to the `Plugins` section.
+3. Click on the `Marketplace` tab.
+4. Search for "Index Generator" in the search bar.
+5. Click on the `Install` button next to the plugin.
+6. Restart IntelliJ IDEA to apply the changes.
 
+## How to Use
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+1. Right-click on a directory in your TypeScript project.
+2. Select the "Generate index.ts" action from the context menu.
+3. An `index.ts` file will be generated in the selected directory.
+4. The file will contain export statements for default exports from TypeScript files in the directory.
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+## Configuration
+
+The Index Generator Plugin provides a configuration to customize its behavior.
+
+1. Go to `Preferences` or `Settings` in IntelliJ IDEA.
+2. Navigate to the `Tools` section.
+3. Select `Index Generator` from the left menu.
+
+In the configuration settings, you can:
+
+- Specify the icon for the "Generate index.ts" action.
+- Customize the text and description of the action.
+- Configure the tool window behavior and appearance.
+
+## Contributing
+
+Contributions to the Index Generator Plugin are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-username/index-generator-plugin).
+
+## License
+
+This plugin is open-source and is licensed under the [MIT License](https://opensource.org/licenses/MIT).
