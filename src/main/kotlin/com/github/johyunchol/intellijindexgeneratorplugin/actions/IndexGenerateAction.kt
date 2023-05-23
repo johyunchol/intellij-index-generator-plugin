@@ -50,8 +50,6 @@ class IndexGenerateAction : AnAction() {
         val files = currentPsiDirectory?.files!!
         val indexText = generateIndexFileContent(files)
 
-        println("indexFile : $indexText")
-
         WriteCommandAction.runWriteCommandAction(event.project) {
             try {
                 val psiFileFactory: PsiFileFactory = PsiFileFactory.getInstance(event.project)

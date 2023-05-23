@@ -1,6 +1,7 @@
 package com.github.johyunchol.intellijindexgeneratorplugin.toolWindow
 
 import com.github.johyunchol.intellijindexgeneratorplugin.MyBundle
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
@@ -29,9 +30,9 @@ class MyToolWindowFactory : ToolWindowFactory {
         private val service = project.service<MyProjectService>()
 
         fun initContent() {
-            val contentFactory = ContentFactory.SERVICE.getInstance()
+            val contentFactory = ApplicationManager.getApplication().getService(ContentFactory::class.java)
             val content = contentFactory.createContent(createContentPanel(), null, false)
-            toolWindow.contentManager?.apply {
+            toolWindow.contentManager.apply {
                 removeAllContents(true)
                 addContent(content)
             }

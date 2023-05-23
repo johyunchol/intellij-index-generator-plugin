@@ -18,7 +18,6 @@ fun generateIndexFileContent(files: Array<PsiFile>): String {
     val exportStatements = mutableListOf<String>()
 
     files.sortedBy { file -> file.name }.map { file ->
-        println("file : ${file.name}")
         if (file.name == "index.ts") return@map
 
         if (file.name.contains("scss")) return@map
@@ -31,7 +30,6 @@ fun generateIndexFileContent(files: Array<PsiFile>): String {
                 val className = matchResult.groupValues[1]
                 val fileNameWithoutExtension = File(file.name).nameWithoutExtension
                 val exportStatement = "export { default as $className } from './${fileNameWithoutExtension}'"
-                println(exportStatement)
                 exportStatements.add(exportStatement)
             }
         }
