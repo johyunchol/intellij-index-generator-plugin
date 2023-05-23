@@ -1,3 +1,5 @@
+<!-- Plugin description -->
+
 # Index Generator Plugin
 
 The Index Generator Plugin is a plugin for IntelliJ IDEA that simplifies the process of generating an `index.ts` file in your TypeScript projects. It provides a convenient action to generate the index file with export statements for default exports from TypeScript files in the selected directory.
@@ -47,3 +49,5 @@ Contributions to the Index Generator Plugin are welcome! If you find any issues 
 ## License
 
 This plugin is open-source and is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+<!-- Plugin description end -->
