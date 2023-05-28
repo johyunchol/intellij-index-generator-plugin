@@ -5,6 +5,7 @@
 ## [1.0.1]
 ### Added
 - Added plugin icon.
+- If there is a reserved keyword after 'export default', skip it and retrieve the word.
 
 ## [1.0.0]
 ### Added

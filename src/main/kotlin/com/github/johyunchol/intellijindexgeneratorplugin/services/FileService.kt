@@ -1,14 +1,7 @@
 package com.github.johyunchol.intellijindexgeneratorplugin.services
 
-import com.github.johyunchol.intellijindexgeneratorplugin.constants.DefaultEnvExample
-import com.intellij.openapi.application.Application
-import com.intellij.openapi.application.ApplicationManager
-import com.intellij.openapi.project.Project
-import com.intellij.openapi.vfs.LocalFileSystem
-import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiFile
 import java.io.File
-import java.io.IOException
 
 
 /**
@@ -24,7 +17,7 @@ fun generateIndexFileContent(files: Array<PsiFile>): String {
 
         val lines = file.text.split("\n")
         for (line in lines) {
-            val regex = Regex("""export\s+default\s+(\w+)""")
+            val regex = Regex("""export\s+default\s+(?:\b\w+\b\s+)?(\w+)""")
             val matchResult = regex.find(line)
             if (matchResult != null) {
                 val className = matchResult.groupValues[1]

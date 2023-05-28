@@ -1,18 +1,14 @@
 package com.github.johyunchol.intellijindexgeneratorplugin.actions
 
-import com.github.johyunchol.intellijindexgeneratorplugin.constants.EnvType
 import com.github.johyunchol.intellijindexgeneratorplugin.services.generateIndexFileContent
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.fileTypes.FileTypeManager
-import com.intellij.psi.PsiDirectory
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiFileFactory
 import com.intellij.psi.PsiManager
-import java.io.File
-import javax.swing.Icon
 
 /**
  * Action class to demonstrate how to interact with the IntelliJ Platform.
