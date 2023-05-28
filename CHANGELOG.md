@@ -2,6 +2,10 @@
 
 # intellij-index-generator-plugin Changelog
 
+## [1.0.1]
+### Added
+- Added plugin icon.
+
 ## [1.0.0]
 ### Added
 - Initial release of the Index Generator Plugin.
