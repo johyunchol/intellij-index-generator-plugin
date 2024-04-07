@@ -2,6 +2,12 @@
 
 # intellij-index-generator-plugin Changelog
 
+## [1.0.4]
+
+### Added
+
+- IntelliJ latest version compatibility
+
 ## [1.0.3]
 
 ### Added

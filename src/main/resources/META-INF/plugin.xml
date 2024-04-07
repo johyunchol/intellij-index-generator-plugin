@@ -8,6 +8,9 @@
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+    <!-- Specify the IntelliJ IDEA build number range for compatibility -->
+    <idea-version since-build="221" until-build="241.*"/>
+
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.johyunchol.intellijindexgeneratorplugin.toolWindow.MyToolWindowFactory"
                     id="MyToolWindow"/>
